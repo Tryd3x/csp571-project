@@ -1,3 +1,5 @@
+## Installation
+
 To install conda environment in current path, do:
 
 ```conda env create -p env -f environment.yml```
