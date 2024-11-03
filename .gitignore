@@ -1,3 +1,4 @@
 env/
-assets
+assets/datasets
+assets/images
 __pycache__

@@ -1,3 +1,8 @@
+# This file serves to download the 100k most recent chicago crime data from: 
+# https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2/about_data
+#
+# This download and saves the data in the datasets folder
+
 from sodapy import Socrata
 from pathlib import Path
 import pandas as pd
