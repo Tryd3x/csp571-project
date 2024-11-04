@@ -7,7 +7,7 @@ from sodapy import Socrata
 from pathlib import Path
 import pandas as pd
 
-def load_crime_dataset(limit=100000):
+def load_crime_dataset(limit=300000):
     try:
         # Authenticating database servers
         client = Socrata("data.cityofchicago.org", None)
@@ -16,7 +16,7 @@ def load_crime_dataset(limit=100000):
         # Get crime records dating from 2020 to present
         results = client.get(
             dataset_identifier="ijzp-q8t2",
-            # where = "date >= '2020-01-01'",
+            # where = "date <= '2024-10-01'",
             limit=limit)
 
         print(f"Data fetched..")

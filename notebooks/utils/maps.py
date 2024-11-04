@@ -18,6 +18,7 @@ class ChicagoMap:
         districts_df = pd.read_csv('../assets/maps/districts.csv')
         districts_df['geometry'] = districts_df['the_geom'].apply(wkt.loads)
         districts_df.drop(columns=['the_geom'],inplace=True)
+        districts_df = districts_df[districts_df['DIST_NUM'] !=31]
 
         self.district_gdf = gpd.GeoDataFrame(districts_df, geometry='geometry') 
         self.wards_gdf = gpd.GeoDataFrame(wards_df, geometry='geometry')
@@ -29,28 +30,31 @@ class ChicagoMap:
         return self.district_gdf
 
     def plot_ward(self,):
-        return px.choropleth_mapbox(
+        fig =  px.choropleth_mapbox(
             self.wards_gdf,
             geojson=self.wards_gdf.__geo_interface__,
             locations=self.wards_gdf.index,
             mapbox_style="carto-positron",
-            zoom=10,
+            zoom=9.4,
             center={"lat": 41.8781, "lon": -87.6298},  # Center on Chicago
             opacity=0.4,
             height = 800,
             title='Chicago Ward Map',
-            hover_name='Ward',
         )
+        fig.data[0].showlegend = False
+        return fig
     
     def plot_district(self,):
-        return px.choropleth_mapbox(
+        fig =  px.choropleth_mapbox(
             self.district_gdf,
             geojson=self.district_gdf.__geo_interface__,
             locations=self.district_gdf.index,
             mapbox_style="carto-positron",
-            zoom=10,
+            zoom=9.4,
             center={"lat": 41.8781, "lon": -87.6298},  # Center on Chicago
             opacity=0.4,
             height = 800,
             title='Chicago District Map',
         )
+        fig.data[0].showlegend = False
+        return fig
