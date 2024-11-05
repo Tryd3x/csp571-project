@@ -5,7 +5,7 @@ import pandas as pd
 def load_crime_dataset():
     try:
         # Authenticating database servers
-        client = Socrata("data.cityofchicago.org", None)
+        client = Socrata("data.cityofchicago.org", "YsKwaSKrUSHkZgq3Gi7nwaFAr")
         
         print(f"Fetching data...")
         # Get crime records dating from 2020 to present
