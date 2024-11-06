@@ -3,7 +3,7 @@
 #
 # This download and saves the data in the datasets folder
 
-from config import API_KEY
+from .config import API_KEY
 from sodapy import Socrata
 from pathlib import Path
 import pandas as pd
