@@ -2,3 +2,4 @@ env/
 assets/datasets
 assets/images
 __pycache__
+notebooks/misc
