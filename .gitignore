@@ -1,3 +1,7 @@
 env/
-assets
+assets/datasets
+assets/images
 __pycache__
+notebooks/misc
+datasets/
+.env
