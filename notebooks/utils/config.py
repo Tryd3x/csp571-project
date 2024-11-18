@@ -1,1 +1,1 @@
-API_KEY = 'place app token here'
+API_KEY = 'API KEY'

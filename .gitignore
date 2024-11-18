@@ -1,3 +1,6 @@
 env/
 assets
 __pycache__
+
+notebooks/utils/config.py
+
