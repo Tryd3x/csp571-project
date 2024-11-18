@@ -3,5 +3,5 @@ assets/datasets
 assets/images
 __pycache__
 notebooks/misc
-notebooks/utils/config.py
 datasets/
+.env
