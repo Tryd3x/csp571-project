@@ -89,6 +89,7 @@ dependencies:
       - pyparsing==3.1.4
       - pyproj==3.7.0
       - python-dateutil==2.9.0.post0
+      - python-dotenv==1.0.1
       - python-slugify==8.0.4
       - pytz==2024.2
       - referencing==0.35.1
@@ -109,4 +110,5 @@ dependencies:
       - webencodings==0.5.1
       - widgetsnbextension==4.0.13
       - xgboost==2.1.2
+      - yellowbrick==1.5
 prefix: D:\Codehub\csp571-project\env
