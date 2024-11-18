@@ -2,9 +2,11 @@
 
 - Create your app token from https://data.cityofchicago.org/
 
-- Place app token inside `utils/config.py`
+- Create a file and name it `.env` at project base path
 
-**Note:** Make sure to add `config.py` to `.gitignore`
+- Place the app token inside `.env` and name it as `API_KEY = "your_token"`
+
+**Note:** Make sure to add `.env` to `.gitignore`
 
 ## Installation
 
