@@ -4,9 +4,12 @@
 # This download and saves the data in the datasets folder
 
 import os
+
 from sodapy import Socrata
 from pathlib import Path
 import pandas as pd
+
+load_dotenv(dotenv_path='../../')
 
 def load_crime_dataset(limit=2000000):
     try:
