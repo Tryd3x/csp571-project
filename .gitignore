@@ -1,4 +1,7 @@
 env/
-.ipynb_checkpoints
-datasets
+assets/datasets
+assets/images
 __pycache__
+notebooks/misc
+datasets/
+.env

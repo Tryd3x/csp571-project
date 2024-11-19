@@ -3,7 +3,7 @@
 #
 # This download and saves the data in the datasets folder
 
-from .config import API_KEY
+import os
 from sodapy import Socrata
 from pathlib import Path
 import pandas as pd
@@ -11,7 +11,7 @@ import pandas as pd
 def load_crime_dataset(limit=2000000):
     try:
         # Authenticating database servers
-        client = Socrata("data.cityofchicago.org", API_KEY)
+        client = Socrata("data.cityofchicago.org", os.getenv('API_KEY'))
         
         print(f"Fetching data...")
 
