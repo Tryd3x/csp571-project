@@ -1,5 +1,6 @@
 env/
 assets/datasets
+.ipynb_checkpoints
 assets/images
 __pycache__
 notebooks/misc
