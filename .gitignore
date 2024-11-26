@@ -6,4 +6,5 @@ __pycache__
 notebooks/misc
 datasets/
 .env
-
+model-reports/neural_network_model.keras
+model-reports/random_forest_model.pkl
